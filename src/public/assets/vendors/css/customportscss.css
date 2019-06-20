@@ -72,6 +72,7 @@
 }
 .button-right i {
   padding-bottom: 10px;
+  opacity: 0.6;
   width: 25px;
   height: 30px;
 }

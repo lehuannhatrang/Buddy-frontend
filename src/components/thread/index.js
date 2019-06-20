@@ -46,9 +46,9 @@ class ThreadCard extends Component {
           </div>
         </div>
         <div className="button-right">
-          <i className="fa fa-star-o" style={{ "font-size": 20 }} />
-          <i className="fa fa-comment-o" style={{ "font-size": 20 }} />
-          <i className="fa fa-share" style={{ "font-size": 20 }} />
+          <i className="fa fa-star-o" style={{ "font-size": 18 }} />
+          <i className="fa fa-comment-o" style={{ "font-size": 18 }} />
+          <i className="fa fa-share" style={{ "font-size": 18 }} />
         </div>
       </div>
     );
