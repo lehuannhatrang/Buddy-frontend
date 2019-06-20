@@ -12,7 +12,6 @@ class DashBoard extends Component {
                 <Header style={{position:"relative"}}/>
                 <div className="row">
                     <div className="col-8 offset-2 border border-info justify-content-center align-self-center">
-                        
                     </div>
                 </div>
             </div>

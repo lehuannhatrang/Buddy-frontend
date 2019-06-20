@@ -21,14 +21,36 @@ class Header extends Component {
         return (
             <header  className="app-header navbar" style={{...this.props.style,height:70}}>
                 <a className="col-2 p-2" href="#" style={{height:"100%"}}><img className="img-fluid" src="../../public/bear.PNG" style={{height:"100%"}} alt="Italian Trulli"/></a> 
-                <div className="col-6 h-100 p-3">
+                <div className="col-6 h-100 pt-3 pb-2">
                     <SearchBar style={{height: "100%"}}/>   
                 </div>
-                <a className="col-2 p-3 justify-content-center align-self-center" data-toggle="dropdown" href="#" role="button" style={{height:"100%"}}
+                <div className="col-1 pt-3 pb-3 justify-content-center align-self-center" role="button" style={{height:"100%"}}
                     aria-haspopup="true" aria-expanded="false">
-                    <img src="/img/avatars/6.jpg" className="img-avatar mr-2" alt="admin@bootstrapmaster.com" style={{height:"100%"}}/>
-                    <h5 className="d-inline-block">Huan</h5>
-                </a>
+                    <a href="#">
+                        <img src="/img/avatars/6.jpg" className="img-avatar mr-2" alt="admin@bootstrapmaster.com" style={{height:"100%"}}/>
+                    </a>
+                    <div className="d-inline-block text text-muted" style={{cursor: "default"}}>Huan</div>
+                </div>
+                <div className="col-3 p-2">
+                    <div className="row">
+                        <div className="col-3 border-right border-light">
+                            <div className="btn btn-link btn-lg">
+                                Create
+                            </div>
+                        </div>
+                        <div className="col-3 border-right border-light">
+                            <div className="btn btn-link btn-lg">
+                                Tutor
+                            </div>
+                        </div>
+                        <div className="col-6 d-flex justify-content-around align-self-center" style={{cursor: "pointer"}}>
+                            <span className="fa fa-comments-o" style={{"font-size": 25, color: "#20a8d8"}}/>
+                            <span className="fa fa-users" style={{"font-size": 25, color: "#20a8d8"}}/>
+                            <span className="fa fa-bell-o" style={{"font-size": 25, color: "#20a8d8"}}/>
+                        </div>
+                    </div>
+                </div>
+                
                 
             </header>
         )
