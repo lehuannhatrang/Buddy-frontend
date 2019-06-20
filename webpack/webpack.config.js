@@ -19,7 +19,7 @@ module.exports = (env) => {
         ],
         output: {
             path: paths.DIST,
-            filename: 'app.bundle.js',
+            filename: 'app.bundle.[chunkhash].js',
             publicPath: "/",
         },
         module: {
