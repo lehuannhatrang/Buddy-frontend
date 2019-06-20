@@ -41,10 +41,12 @@
 }
 .topic-list-wrapper {
   margin-bottom: 10px;
+  display: flex;
 }
 .topic-card {
   width: 80px;
   display: flex;
+  margin-right: 20px;
   align-items: center;
   justify-content: center;
   height: 30px;

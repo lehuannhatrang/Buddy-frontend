@@ -4,7 +4,10 @@ class ThreadCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      score: 1
+      score: 1,
+      title: `I am trying to store output from calculator and display on label or
+      text box in visual basic asp.net`,
+      cardlist: ["python", "c++"]
     };
     this.handleVote = this.handleVote.bind(this);
   }
@@ -30,12 +33,16 @@ class ThreadCard extends Component {
           />
         </div>
         <div className="mid-card-wrapper">
-          <p className="title-card-thread">
-            I am trying to store output from calculator and display on label or
-            text box in visual basic asp.net
-          </p>
+          <p className="title-card-thread">{this.state.title}</p>
           <div className="topic-list-wrapper">
-            <div className="topic-card">asp.net</div>
+            {this.state.cardlist &&
+              this.state.cardlist.map((item, index) => {
+                return (
+                  <div className="topic-card" key={index}>
+                    {item}
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div className="button-right">
