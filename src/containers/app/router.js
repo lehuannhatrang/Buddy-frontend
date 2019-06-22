@@ -4,7 +4,8 @@ import Login from "../login";
 import DashBoard from "../dashboard";
 import NotFound from "../errors/NotFound";
 import If from "../../components/control/If";
-import ThreadCard from "../../components/thread";
+// import ThreadCard from "../../components/thread";
+import UserPage from "../../components/user";
 
 class Router extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Router extends Component {
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route exact path="/" component={DashBoard} />
-          <Route path="/test" component={ThreadCard} />
+          <Route path="/test" component={UserPage} />
           <Route path="" component={NotFound} />
         </Switch>
       </div>
