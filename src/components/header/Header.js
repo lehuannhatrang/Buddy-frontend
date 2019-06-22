@@ -22,7 +22,7 @@ class Header extends Component {
             <header  className="app-header navbar" style={{...this.props.style,height:70}}>
                 <a className="col-2 p-2" href="#" style={{height:"100%"}}><img className="img-fluid" src="../../public/bear.PNG" style={{height:"100%"}} alt="Italian Trulli"/></a> 
                 <div className="col-6 h-100 pt-3 pb-2">
-                    <SearchBar style={{height: "100%"}}/>   
+                    <SearchBar style={{height: "100%"}} onChange={value => this.props.onChange(value)}/>   
                 </div>
                 <div className="col-1 pt-3 pb-3 justify-content-center align-self-center" role="button" style={{height:"100%"}}
                     aria-haspopup="true" aria-expanded="false">
