@@ -57,12 +57,12 @@ class DashBoard extends Component {
         const data = this.state.threads.filter(thread => thread.title.toLowerCase().includes(this.state.searchKeyWord) && ( this.state.chosenTags.length === 0 || thread.cardList.filter(tag => this.state.chosenTags.includes(tag)).length > 0))
         return(
             <div className="bg bg-gray">
-                <Header style={{position:"relative"}} onChange={(value) => this.setState({searchKeyWord: value.toLowerCase()})}/>
+                <Header style={{position:"relative"}} searchBar onChange={(value) => this.setState({searchKeyWord: value.toLowerCase()})}/>
                 <div className="row">
                     <div className="col-8 offset-2 mt-3">
                         <div className="row bg-white pr-3 pl-3 pt-2 pb-2" >
                             <span className="fa fa-tag mr-4" style={{"font-size": 30, "color": "gray"}}></span>
-                            <div className="text text-muted" style={{"font-size": 23}}>Trendings</div>
+                            <div className="text text-muted" style={{"font-size": 23, cursor:"default"}}>Trendings</div>
                         </div>
                         <div className="row p-3 bg-secondary" style={{"overflow-x": "scroll", "overflow-y": "hidden"}}>
                             {this.state.tags.map(tag => (
@@ -73,9 +73,9 @@ class DashBoard extends Component {
                         </div>
                         <div className="row bg-white pr-3 pl-3 pt-2 pb-2 mt-3" >
                             <span className="fa fa-fire mr-4" style={{"font-size": 30, "color": "gray"}}></span>
-                            <div className="text text-muted" style={{"font-size": 23}}>Threads</div>
+                            <div className="text text-muted" style={{"font-size": 23, cursor:"default"}}>Threads</div>
                         </div>
-                        <div className="row pl-3 pr-3 bg-secondary" style={{"max-height" : 590, "overflow-y": "scroll"}}>
+                        <div className="row pl-3 pr-3 bg-secondary" style={{"min-height" : 200}}>
                             {data.map(thread => (
                                 <Thread className="mt-3 mb-3" style={{width: "100%", margin : "auto"}} 
                                 title={thread.title}
