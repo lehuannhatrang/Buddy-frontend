@@ -20,9 +20,9 @@ class Header extends Component {
         const displayName = this.props.user.userInfo ? this.props.user.userInfo.displayName : '';
         return (
             <header  className="app-header navbar" style={{...this.props.style,height:70}}>
-                <a className="col-2 p-2" href="#" style={{height:"100%"}}><img className="img-fluid" src="../../public/bear.PNG" style={{height:"100%"}} alt="Italian Trulli"/></a> 
+                <a className="col-2 p-2" href="#" style={{height:"100%"}}><img className="img-fluid" src="/img/logo-buddy.png" style={{height:"100%"}} alt="Logo Buddy"/></a> 
                 <div className="col-6 h-100 pt-3 pb-2">
-                    <SearchBar style={{height: "100%"}} onChange={value => this.props.onChange(value)}/>   
+                    {this.props.searchBar && <SearchBar style={{height: "100%"}} onChange={value => this.props.onChange(value)}/>}
                 </div>
                 <div className="col-1 pt-3 pb-3 justify-content-center align-self-center" role="button" style={{height:"100%"}}
                     aria-haspopup="true" aria-expanded="false">
