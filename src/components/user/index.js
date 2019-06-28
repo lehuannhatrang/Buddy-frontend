@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ThreadCardUser from "./threadcarduser";
+import Header from "../header/Header";
+import { Link } from "react-router-dom";
 
 class UserPage extends Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class UserPage extends Component {
       ],
       rate: ["324", "175", "93", "82", "75", "71", "55", "54", "38", "30"],
       questions: [
-        "Fastest way to tell if two files are the same in Unix/Linux?",
+        "I am trying to store output from calculator and display on label or text box in visual basic asp.net",
         "nginx: send all requests to a single html page",
         "Linux / Bash, using ps -o to get process by specific name?",
         "Why does PostgreSQL's dt show only public schema tables?",
@@ -32,8 +34,21 @@ class UserPage extends Component {
   render() {
     return (
       <div>
+        <Header
+          style={{ position: "relative" }}
+          // searchBar
+          // onChange={value =>
+          //   this.setState({ searchKeyWord: value.toLowerCase() })
+          // }
+        />
+
         <div className="user-page-cover">
           <img src="/vendors/img/user-cover.png" />
+          <div className="name-class-wrap">
+            <div className="pro">PRO</div>
+            <div className="name"> White Castaneda</div>
+            <div className="class">Class of 2016 - Chemical Engineering</div>
+          </div>
         </div>
         <div className="user-avatar-info-wrapper">
           <img src="/vendors/img/user-avatar.jpg" />
@@ -65,11 +80,7 @@ class UserPage extends Component {
             </div>
           </div>
         </div>
-        <div className="name-class-wrap">
-          <div className="pro">PRO</div>
-          <div className="name"> White Castaneda</div>
-          <div className="class">Class of 2016 - Chemical Engineering</div>
-        </div>
+
         <div className="main-wrapper-user">
           {/* <div className="calendar">
             <div className="month"> June 2019</div>
@@ -179,7 +190,10 @@ class UserPage extends Component {
               return (
                 <div className="item">
                   <div className="number">{this.state.rate[index]}</div>
-                  <li key={index}>{item}</li>
+                  <Link to="/thread/21230313">
+                    <li key={index}>{item}</li>
+                  </Link>
+
                   <hr />
                 </div>
               );
